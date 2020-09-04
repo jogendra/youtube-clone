@@ -54,6 +54,7 @@ html, body {
 
 .col > .headings {
     margin: 0;
+    margin-top: 8px;
 }
 
 .col-heading {
@@ -128,8 +129,7 @@ html, body {
 }
 
 .subs-cards .card-1 {
-    border: 1px solid red;
-    padding: 8px 32px;
+    padding: 16px 32px;
 }
 
 .subs-cards .card-1 > img {
@@ -182,4 +182,27 @@ html, body {
 .side-item:hover {
     cursor: pointer;
     color: #666666;
+}
+
+.card-1 > p {
+    margin: 0;
+}
+
+.vid-title {
+    color: #323232;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 8px !important;
+}
+
+.vid-channel {
+    color: #cc181f;
+    padding-top: 4px;
+}
+
+.vid-time-views {
+    color: #666666;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding-top: 2px;
 }

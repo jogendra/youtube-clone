@@ -13,7 +13,7 @@
         <link rel="icon" href="https://www.youtube.com/s/desktop/ebcf1b0f/img/favicon_48.png" sizes="48x48" >
         <link rel="icon" href="https://www.youtube.com/s/desktop/ebcf1b0f/img/favicon_96.png" sizes="96x96" >
         <link rel="icon" href="https://www.youtube.com/s/desktop/ebcf1b0f/img/favicon_144.png" sizes="144x144" >
-        <!-- Import Material Icons - FontAwesome are ugly -->
+        <!-- Import Material Icons - FontAwesome icons are ugly -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Import Custom CSS -->
         <link href="./css/main.css" rel="stylesheet">
@@ -46,31 +46,14 @@
                 <!-- Left Column - Subscriptions -->
                 <div class="left-column col">
                     <h2 class="col-heading headings">Subscriptions</h2>
-                    <div class="subs-cards">
-                        <div class="card-1">
-                            <img src="http://i3.ytimg.com/vi/LSYpxo7behA/hqdefault.jpg">
-                            <p>This is description</p>
-                            <p>This is channel name</p>
-                            <p>timestamp</p>
-                        </div>
-                        <div class="card-1">
-                            <img src="http://i3.ytimg.com/vi/LSYpxo7behA/hqdefault.jpg">
-                            <p>This is description</p>
-                            <p>This is channel name</p>
-                            <p>timestamp</p>
-                        </div>
-                        <div class="card-1">
-                            <img src="http://i3.ytimg.com/vi/LSYpxo7behA/hqdefault.jpg">
-                            <p>This is description</p>
-                            <p>This is channel name</p>
-                            <p>timestamp</p>
-                        </div>
-                        <div class="card-1">
-                            <img src="http://i3.ytimg.com/vi/LSYpxo7behA/hqdefault.jpg">
-                            <p>This is description</p>
-                            <p>This is channel name</p>
-                            <p>timestamp</p>
-                        </div>
+                    <div id="subsID" class="subs-cards">
+                        <!-- TO BE POPULATED FROM JSON -->
+                        <!-- <div class="card-1">
+                            <img src="http://i3.ytimg.com/vi/cmkKxNN7cs4/maxresdefault.jpg">
+                            <p class="vid-title">Here We Go - Mat Kearney</p>
+                            <p class="vid-channel">Mat Kearney</p>
+                            <p class="vid-time-views">3 hours &middot; 67535376 views</p>
+                        </div> -->
                     </div>
                 </div>
                 <!-- Main Colum - Popular -->
@@ -202,20 +185,7 @@
         <!-- Custom JavaScript File -->
         <script src="./js/main.js"></script>
         <!-- Just to make initial loading smooth and animated -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-        <script>
-            $('div.col').each(function(i) {
-                $(this).fadeOut(0).delay(100*i).fadeIn(1600);
-            });
-            $('div.music-category').each(function(i) {
-                $(this).fadeOut(0).delay(1000*i).fadeIn(1800);
-            });
-            $('div.card-1').each(function(i) {
-                $(this).fadeOut(0).delay(100*i).fadeIn(1800);
-            });
-            $('a.side-item').each(function(i) {
-                $(this).fadeOut(0).delay(100*i).fadeIn(1500);
-            });
-        </script>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/main-jquery.js"></script>
     </body>
 </html>

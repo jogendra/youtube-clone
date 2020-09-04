@@ -12,3 +12,23 @@ for (let i = 0; i < sideItems.length; i++) {
     this.className += " active-item";
   });
 }
+
+// Used https://tools.knowledgewalls.com/online-multiline-to-single-line-converter
+// to convert multiline JSON to single line. multiline was not parsing
+let subscriptionJSON = '{"items":[{"img":"http:\/\/i3.ytimg.com\/vi\/cmkKxNN7cs4\/maxresdefault.jpg","title":"Writing Beautiful Packages in Go","channel":"Coding Tech","time":"2 years","views":69857},{"img":"http:\/\/i3.ytimg.com\/vi\/LvgVSSpwND8\/maxresdefault.jpg","title":"Concurrency in Go","channel":"Jake Wright","time":"1 year","views":249659},{"img":"http:\/\/i3.ytimg.com\/vi\/DQOc9bInpuE\/maxresdefault.jpg","title":"My Story | How I Became An Airline Pilot","channel":"Captain Walker","time":"4 months","views":51392},{"img":"http:\/\/i3.ytimg.com\/vi\/7sJQBjn_cRQ\/maxresdefault.jpg","title":"Getting Started with React Native","channel":"DesignCode","time":"16 months","views":73386}]}';
+
+let subscriptionCard = document.getElementById('subsID');
+let subscriptionData = JSON.parse(subscriptionJSON);
+let subscriptionHTML;
+
+subscriptionHTML = subscriptionData.items.map(function(v,i) {
+    return '<div class="card-1">' +
+            '<img src="' + v.img + '">' +
+           '<p class="vid-title">' + v.title + '</p>' +
+           '<p class="vid-channel">' + v.channel + '</p>' +
+           '<p class="vid-time-views">' + v.time + ' &middot; ' + v.views + ' views' + '</p>' +
+           '</div>';
+}).join('');
+
+subscriptionCard.innerHTML = subscriptionHTML;
+
