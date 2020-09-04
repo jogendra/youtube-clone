@@ -169,7 +169,12 @@ html, body {
     margin-right: -10px;
 }
 
-.home-icon {
+.active-item {
     border-left: 4px solid #cc181f;
     margin-left: -8px;
+}
+
+.side-item:hover {
+    cursor: pointer;
+    color: #666666;
 }
