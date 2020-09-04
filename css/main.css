@@ -17,6 +17,9 @@ html, body {
 .outer-most {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .col {
@@ -27,12 +30,14 @@ html, body {
     height: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .outer-most .side-menu {
     width: 3%;
     margin-left: 0;
+    margin-top: 0;
 }
 
 .outer-most .left-column {
@@ -55,8 +60,13 @@ html, body {
     font-weight: 300;
 }
 
+.main-column .col-heading {
+    margin-left: 16px;
+}
+
 .music-category {
     width: 100%;
+    margin-left: 16px;
 }
 
 .music-category .card-heading {
@@ -73,7 +83,7 @@ html, body {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 
 .video-cards .card-4 {
@@ -95,13 +105,12 @@ html, body {
 
 .see-more {
     float: right;
-    padding: 2%;
     margin-top: 64px;
     color: #999;
-    font-size: 1.5em;
+    margin-right: 3%;
 }
 
-.left-column > .col-heading {
+.left-column > .col-heading, .right-column > .col-heading {
     padding-left: 32px;
 }
 
@@ -151,4 +160,16 @@ html, body {
     text-align: center;
     font-size: 1.5em;
     padding: 8px;
+}
+
+.search-icon {
+    background: #cc181f;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.home-icon {
+    border-left: 4px solid #cc181f;
+    margin-left: -8px;
 }
