@@ -3,4 +3,45 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.outer-most {
+    height: 100%;
+    width: 100%;
+}
+
+.col {
+    float: left;
+    background-color: #f1f2f4;
+    padding: 8px;
+    border: 1px solid black;
+    margin: 0.25%;
+    height: 100%;
+    overflow-y: scroll;
+    min-height: 100vh;
+}
+
+.outer-most .side-menu {
+    width: 3%;
+    margin-left: 0;
+}
+
+.outer-most .left-column {
+    width: 20%;
+}
+
+.outer-most .main-column {
+    width: 50%;
+}
+
+.outer-most .right-column {
+    width: 20%;
 }
