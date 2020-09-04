@@ -34,3 +34,8 @@ let subscriptionCard = document.getElementById('subsID');
 let subscriptionData = JSON.parse(subscriptionJSON);
 subscriptionCard.innerHTML = generateSideColumnHTML(subscriptionData);
 
+// Populate Recommended section data
+let recJSON = '{"items":[{"img":"http:\/\/i3.ytimg.com\/vi\/_YlYuNMTCc8\/maxresdefault.jpg","title":"What is an API and how do you design it?","channel":"Gaurav Sen","time":"12 months","views":263062},{"img":"http:\/\/i3.ytimg.com\/vi\/o8NPllzkFhE\/maxresdefault.jpg","title":"The mind behind Linux | Linus Torvalds","channel":"TED","time":"4 years","views":3348003},{"img":"http:\/\/i3.ytimg.com\/vi\/0qi33gLphV4\/maxresdefault.jpg","title":"Coldplay - Everyday Life (Live In Jordan)","channel":"Coldplay","time":"10 months","views":1259156},{"img":"http:\/\/i3.ytimg.com\/vi\/hD-fRaKoDOY\/maxresdefault.jpg","title":"Moderator - The World Within LP [Full Album]","channel":"Melting Records","time":"2 years","views":1101510},{"img":"http:\/\/i3.ytimg.com\/vi\/eAbDNUj8pxo\/maxresdefault.jpg","title":"Coldplay - O (Fly On) - Extended","channel":"Freelance Ghosts","time":"4 years","views":50939949}]}';
+let recCard = document.getElementById('recID');
+let recData = JSON.parse(recJSON);
+recCard.innerHTML = generateSideColumnHTML(recData);
