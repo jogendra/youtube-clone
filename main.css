@@ -1,0 +1,6 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
