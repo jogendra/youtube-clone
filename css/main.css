@@ -123,3 +123,32 @@ html, body {
     height: 120px;
     border-radius: 2px;
 }
+
+.top-bottom-items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+}
+
+.top-bottom-items .top-items, .bottom-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-bottom-items .top-items {
+    margin-top: -8px;
+}
+
+.top-bottom-items .bottom-items {
+    margin-bottom: 16px;
+}
+
+.top-bottom-items .top-items > a, .bottom-items > a {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 8px;
+}
