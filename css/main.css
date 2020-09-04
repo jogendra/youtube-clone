@@ -110,6 +110,11 @@ html, body {
     margin-right: 3%;
 }
 
+.see-more:hover {
+    cursor: pointer;
+    color: #000000;
+}
+
 .left-column > .col-heading, .right-column > .col-heading {
     padding-left: 32px;
 }
