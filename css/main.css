@@ -201,3 +201,32 @@ html, body {
     font-weight: 500;
     padding-top: 1px;
 }
+
+/* Modal - Video Player */
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container .modal-content {
+    color: #999;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#videoCard:hover {
+    cursor: pointer;
+}

@@ -16,7 +16,7 @@ for (let i = 0; i < sideItems.length; i++) {
 // Generate HTML from JSON data for video cards
 function generateVideoCardsHTML(data, cardClass) {
     let htmlData = data.items.map(function(v,i) {
-        return '<div class="' + cardClass + '">' +
+        return '<div id="videoCard" class="' + cardClass + '">' +
                 '<img src="' + v.img + '">' +
                '<p class="vid-title">' + v.title + '</p>' +
                '<p class="vid-channel">' + v.channel + '</p>' +
@@ -59,3 +59,31 @@ gamingCard.innerHTML = generateVideoCardsHTML(gamingData, "card-4");
 // Extra - to show scrolling
 let sbsCard = document.getElementById('sbsCard');
 sbsCard.innerHTML = generateVideoCardsHTML(subscriptionData, "card-4");
+
+// Modal - Player
+
+let modal = document.getElementById('modal-card');
+
+// Dimiss player on clicking anywhere outside
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    // Stop player on close
+    // Idea taken from - https://stackoverflow.com/a/30358006/10007390
+    document.getElementById('youtube_player').contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+  }
+}
+
+// Add onclick event listners
+let videoCardElements = document.getElementsByClassName('video-cards');
+for(var i=0; i < videoCardElements.length; i++){
+    videoCardElements[i].addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+}
+let subsCardElements = document.getElementsByClassName('subs-cards');
+for(var i=0; i < subsCardElements.length; i++){
+    subsCardElements[i].addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+}

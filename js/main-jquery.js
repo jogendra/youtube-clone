@@ -1,3 +1,4 @@
+// Animation for initial page loading
 $('div.col').each(function(i) {
     $(this).fadeOut(0).delay(100*i).fadeIn(1600);
 });
